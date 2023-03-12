@@ -16,3 +16,10 @@ body {
     'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell,
      'Open Sans', 'Helvetica Neue', sans-serif;
 }
+
+/* grid-container */
+.grid-container {
+    display: grid;
+    width: 100vw;
+    height: 100vh;
+}
