@@ -16,6 +16,22 @@ changeGridButton.classList.add('button-grid')
 buttonContainer.appendChild(changeGridButton);
 changeGridButton.textContent = "CHANGE GRID";
 
+/* DOM */
+
+changeGridButton.addEventListener('click', () => {
+    userDefinedGrid();
+})
+
+
+// function that creates the grid based on the input of the user //
+
+function userDefinedGrid() {
+    let number = prompt("Please select the size of your grid between 1-100");
+    gridContainer.style.gridTemplateColumns = `repeat(${number}, 1fr)`;
+    gridContainer.style.gridTemplateRows = `repeat(${number}, 1fr)`;
+    gridSize(number);
+}
+
 // function for the grid size //
 
 function gridSize(size) {
