@@ -32,7 +32,17 @@ function gridSize(size) {
         squares.addEventListener('mouseover', () => {
             squares.setAttribute('style', 'background-color: red; border: 3px solid black')
         })
+
+        // function that resets the grid //
+
+        function clearGrid() {
+            changeGridButton.addEventListener('click', () => {
+                squares.removeAttribute('style', 'background-color: red; border: 3px solid black')
+            })
+        }
+        clearGrid();
     }
+    
 }
 
 gridSize(16)
