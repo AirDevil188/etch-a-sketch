@@ -11,5 +11,6 @@ const buttonContainer = document.createElement('div');
 buttonContainer.classList.add('button-container');
 container.appendChild(buttonContainer);
 const changeGridButton = document.createElement('button');
+changeGridButton.classList.add('button-grid')
 buttonContainer.appendChild(changeGridButton);
-changeGridButton.textContent = "CHANGE GRID"
+changeGridButton.textContent = "CHANGE GRID";
