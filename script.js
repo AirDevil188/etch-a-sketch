@@ -22,7 +22,17 @@ function gridSize(size) {
     gridContainer.style.gridTemplateColumns = `repeat(${size}, 1fr)`;
     gridContainer.style.gridTemplateRows = `repeat(${size}, 1fr)`;
 
+// for loop for creating squares //
 
+    for (let i = 0; i < size * size; i++) {
+        const squares = document.createElement('div');
+        gridContainer.appendChild(squares);
+
+        // Event Listener for changing background color of squares when hovering //
+        squares.addEventListener('mouseover', () => {
+            squares.setAttribute('style', 'background-color: red; border: 3px solid black')
+        })
+    }
 }
 
 gridSize(16)
