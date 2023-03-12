@@ -1,5 +1,6 @@
 /* DOM */
-
+const heading = document.createElement('h1');
+heading.classList.add('heading');
 // grid-container //
 const container = document.querySelector(".container");
 const gridContainer = document.createElement("div");
