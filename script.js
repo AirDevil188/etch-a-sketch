@@ -13,9 +13,13 @@ container.appendChild(gridContainer);
 // button-container and a button element //
 
 const changeGridButton = document.createElement("button");
+const randomColorButton = document.createElement('button');
+randomColorButton.classList.add('random-rgb-button');
 changeGridButton.classList.add("button-grid");
+buttonContainer.appendChild(randomColorButton);
 buttonContainer.appendChild(changeGridButton);
 changeGridButton.textContent = "CHANGE GRID";
+randomColorButton.textContent = "RANDOM COLOR"
 
 /* DOM */
 
@@ -44,7 +48,7 @@ function gridSize(size) {
 
   // for loop for creating squares //
 
-  for (let i = 0; i < size * size; i++) {
+  for (let i = 0; i < (size * size); i++) {
     const squares = document.createElement("div");
     gridContainer.appendChild(squares);
 
