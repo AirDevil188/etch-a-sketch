@@ -1,6 +1,7 @@
 /* DOM */
 const heading = document.createElement("h1");
 heading.classList.add("heading");
+
 // grid-container //
 const container = document.querySelector(".container");
 const gridContainer = document.createElement("div");
@@ -23,6 +24,7 @@ buttonContainer.appendChild(changeGridButton);
 buttonContainer.appendChild(blackColorButton);
 buttonContainer.appendChild(randomColorButton);
 buttonContainer.appendChild(eraserButton);
+
 changeGridButton.textContent = "CREATE NEW GRID";
 eraserButton.textContent = "ERASER ";
 blackColorButton.textContent = "BLACK COLOR";
@@ -38,7 +40,7 @@ changeGridButton.addEventListener("click", () => {
 
 function userDefinedGrid() {
   let number = prompt("Please select the size of your grid between 1-100.");
-  if (number < 101) {
+  if (number > 0 && number < 101) {
     gridContainer.style.gridTemplateColumns = `repeat(${number}, 1fr)`;
     gridContainer.style.gridTemplateRows = `repeat(${number}, 1fr)`;
     gridSize(number);
