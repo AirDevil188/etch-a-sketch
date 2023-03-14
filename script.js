@@ -15,14 +15,17 @@ container.appendChild(gridContainer);
 const changeGridButton = document.createElement("button");
 const randomColorButton = document.createElement("button");
 const blackColorButton = document.createElement("button");
+const eraserButton = document.createElement("button");
 randomColorButton.setAttribute("id", "random-rgb-button");
 blackColorButton.setAttribute("id", "black-color-button");
 changeGridButton.classList.add("button-grid");
 buttonContainer.appendChild(changeGridButton);
+buttonContainer.appendChild(eraserButton);
 buttonContainer.appendChild(blackColorButton);
 buttonContainer.appendChild(randomColorButton);
-blackColorButton.textContent = "BLACK COLOR";
 changeGridButton.textContent = "CREATE NEW GRID";
+eraserButton.textContent = "ERASER ";
+blackColorButton.textContent = "BLACK COLOR";
 randomColorButton.textContent = "RANDOM COLOR";
 
 /* DOM */
