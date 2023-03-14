@@ -90,6 +90,12 @@ function gridSize(size) {
       });
     });
 
+    eraserButton.addEventListener("click", () => {
+      squares.addEventListener("mouseover", () => {
+        squares.setAttribute("style", "background-color: white;");
+      });
+    });
+
     // function that resets the grid //
 
     function clearGrid() {
