@@ -14,11 +14,15 @@ container.appendChild(gridContainer);
 
 const changeGridButton = document.createElement("button");
 const randomColorButton = document.createElement("button");
-randomColorButton.classList.add("random-rgb-button");
+const blackColorButton = document.createElement("button");
+randomColorButton.classList.add("#random-rgb-button");
+blackColorButton.classList.add("black-color-button");
 changeGridButton.classList.add("button-grid");
+buttonContainer.appendChild(blackColorButton);
 buttonContainer.appendChild(randomColorButton);
 buttonContainer.appendChild(changeGridButton);
-changeGridButton.textContent = "CHANGE GRID";
+blackColorButton.textContent = "BLACK COLOR";
+changeGridButton.textContent = "CREATE NEW GRID";
 randomColorButton.textContent = "RANDOM COLOR";
 
 /* DOM */
@@ -71,6 +75,15 @@ function gridSize(size) {
       clearGrid();
       squares.addEventListener("mouseover", () => {
         randomRgbColor();
+      });
+    });
+
+    blackColorButton.addEventListener("click", () => {
+      squares.addEventListener("mouseover", () => {
+        squares.setAttribute(
+          "style",
+          "background-color: black; border: 3px solid white"
+        );
       });
     });
 
