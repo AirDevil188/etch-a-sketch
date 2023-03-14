@@ -1,6 +1,6 @@
 /* DOM */
-const heading = document.createElement('h1');
-heading.classList.add('heading');
+const heading = document.createElement("h1");
+heading.classList.add("heading");
 // grid-container //
 const container = document.querySelector(".container");
 const gridContainer = document.createElement("div");
@@ -13,13 +13,13 @@ container.appendChild(gridContainer);
 // button-container and a button element //
 
 const changeGridButton = document.createElement("button");
-const randomColorButton = document.createElement('button');
-randomColorButton.classList.add('random-rgb-button');
+const randomColorButton = document.createElement("button");
+randomColorButton.classList.add("random-rgb-button");
 changeGridButton.classList.add("button-grid");
 buttonContainer.appendChild(randomColorButton);
 buttonContainer.appendChild(changeGridButton);
 changeGridButton.textContent = "CHANGE GRID";
-randomColorButton.textContent = "RANDOM COLOR"
+randomColorButton.textContent = "RANDOM COLOR";
 
 /* DOM */
 
@@ -48,7 +48,7 @@ function gridSize(size) {
 
   // for loop for creating squares //
 
-  for (let i = 0; i < (size * size); i++) {
+  for (let i = 0; i < size * size; i++) {
     const squares = document.createElement("div");
     gridContainer.appendChild(squares);
 
@@ -60,18 +60,29 @@ function gridSize(size) {
       );
     });
 
+    function randomRgbColor() {
+      let r = Math.floor(Math.random() * 256);
+      let g = Math.floor(Math.random() * 256);
+      let b = Math.floor(Math.random() * 256);
+      squares.style.backgroundColor = "rgb(" + r + "," + g + "," + b + ")";
+    }
+
+    randomColorButton.addEventListener("click", () => {
+      clearGrid();
+      squares.addEventListener("mouseover", () => {
+        randomRgbColor();
+      });
+    });
+
     // function that resets the grid //
 
     function clearGrid() {
       changeGridButton.addEventListener("click", () => {
-        squares.removeAttribute(
-          "style",
-          "background-color: red; border: 3px solid black"
-        );
+        squares.removeAttribute("style");
       });
     }
     clearGrid();
   }
 }
-
+clearGrid();
 gridSize(16);
