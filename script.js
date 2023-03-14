@@ -15,7 +15,7 @@ container.appendChild(gridContainer);
 const changeGridButton = document.createElement("button");
 const randomColorButton = document.createElement("button");
 const blackColorButton = document.createElement("button");
-randomColorButton.classList.add("#random-rgb-button");
+randomColorButton.setAttribute("id", "random-rgb-button");
 blackColorButton.classList.add("black-color-button");
 changeGridButton.classList.add("button-grid");
 buttonContainer.appendChild(blackColorButton);
