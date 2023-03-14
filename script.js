@@ -56,7 +56,7 @@ function gridSize(size) {
     squares.addEventListener("mouseover", () => {
       squares.setAttribute(
         "style",
-        "background-color: red; border: 3px solid black"
+        "background-color: black; border: 3px solid white"
       );
     });
 
