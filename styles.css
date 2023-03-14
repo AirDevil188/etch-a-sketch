@@ -40,9 +40,9 @@ button {
   -webkit-text-stroke-color: purple;
 }
 
-#random-rgb-button:hover {
-  opacity: 1;
-  transition: 0.3s;
+#black-color-button {
+  background: black;
+  color: white;
 }
 
 button:hover {
