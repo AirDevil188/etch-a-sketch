@@ -1,4 +1,6 @@
 /* DOM */
+
+// heading //
 const heading = document.createElement("h1");
 heading.classList.add("heading");
 
@@ -8,6 +10,7 @@ const gridContainer = document.createElement("div");
 gridContainer.classList.add("grid-container");
 const buttonContainer = document.createElement("div");
 buttonContainer.classList.add("button-container");
+container.appendChild(heading);
 container.appendChild(buttonContainer);
 container.appendChild(gridContainer);
 
@@ -25,6 +28,7 @@ buttonContainer.appendChild(blackColorButton);
 buttonContainer.appendChild(randomColorButton);
 buttonContainer.appendChild(eraserButton);
 
+heading.textContent = "Etch-A-Sketch";
 changeGridButton.textContent = "CREATE NEW GRID";
 eraserButton.textContent = "ERASER ";
 blackColorButton.textContent = "BLACK COLOR";
@@ -76,6 +80,7 @@ function gridSize(size) {
       let g = Math.floor(Math.random() * 256);
       let b = Math.floor(Math.random() * 256);
       squares.style.backgroundColor = "rgb(" + r + "," + g + "," + b + ")";
+      squares.style.border = "3px solid white";
     }
 
     // Event Listener for random rgb color when hovering over squares.//
@@ -102,7 +107,10 @@ function gridSize(size) {
 
     eraserButton.addEventListener("click", () => {
       squares.addEventListener("mouseover", () => {
-        squares.setAttribute("style", "background-color: white;");
+        squares.setAttribute(
+          "style",
+          "background-color: white; borer: 3px solid white;"
+        );
       });
     });
 
